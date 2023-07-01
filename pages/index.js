@@ -144,7 +144,7 @@ export default function Home() {
               onClick={() => setShowApplication(true)}
               className="bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
             >
-              Preview Invoice
+              Preview Information
             </button>
             <p className="flex justify-center"> বিশেষ প্রয়োজনেঃ উপজেলা গেট সংলগ্ন, মাদারীপুর সদর, মাদারীপুর। অর্ঘ্য বাবু বাবা ০১৩০০-২৪১০০১ </p>
           </div>
