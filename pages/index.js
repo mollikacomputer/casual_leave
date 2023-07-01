@@ -70,7 +70,7 @@ export default function Home() {
             </button>
           </div>
         ) : (
-          <div className="bg-white radius rounded shadow-xl p-16 mt-10">
+          <div className="bg-white radius rounded shadow-xl p-16 my-10 ">
             <h1 className="md:text-2xl sm:text-lg md:flex justify-center items-center font-bold">
               নৈমিত্তিক ছুটি লেখা দরকার?
               </h1>
