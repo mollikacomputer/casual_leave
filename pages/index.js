@@ -72,11 +72,14 @@ export default function Home() {
         ) : (
           <div className="bg-white radius rounded shadow-xl p-16 mt-10">
             <h1 className="md:text-2xl sm:text-lg md:flex justify-center items-center font-bold">
+              নৈমিত্তিক ছুটি লেখা দরকার?
+              </h1>
+            <h2 className="md:text-xl my-5 sm:text-lg md:flex justify-center items-center font-bold">
               অর্ঘ্য মন্ডল ও
-            </h1>
-            <h2 className="md:text-xl sm:text-lg mb-10 md:flex justify-center items-center font-bold">
-              মল্লিকা কম্পিউটারের সৌজন্যে
             </h2>
+            <h3 className="md:text-lg sm:text-lg mb-10 md:flex justify-center items-center font-bold">
+              মল্লিকা কম্পিউটারের সৌজন্যে
+            </h3>
             <div className="md:grid grid-cols-2 gap-10 ">
               <div className="flex flex-col">
                 <label className="font-bold text-lg" htmlFor="peoplename">
