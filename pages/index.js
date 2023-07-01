@@ -1,7 +1,6 @@
-import { Inter } from "next/font/google";
-import { useState } from "react";
+import ReactToPrint from "react-to-print";
+import { useState, useRef } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [showApplication, setShowApplication] = useState(false);
@@ -10,7 +9,9 @@ export default function Home() {
   const [schoolName, setSchoolName] = useState("");
   const [amountDay, setAmountDay] = useState("");
   const [dayInWord, setDayInWord] = useState("");
-
+  
+  const componentRef = useRef();
+  
   const handlePrint = () => {
     window.print();
   };
@@ -19,16 +20,18 @@ export default function Home() {
       <div className="ml-16 mr-10 ">
         {showApplication ? (
           <div className="bg-white p-10">
-            <button
-              btn-primary
-              onClick={handlePrint}
-              className="bg-blue-500 my-10 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
-            >
-              Print
-            </button>
-            <div>
-              <h2> নৈমিত্তিক ছুটি </h2>
+            <ReactToPrint
+              trigger={() => (
+                <button className="bg-blue-500 mb-10 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300">
+                  Download / Print
+                </button>
+              )}
+              content={() => componentRef.current}
+            />
+            <h2 className="text-4xl font-bold"> নৈমিত্তিক ছুটি </h2>
+            <div ref={componentRef} className="m-32">
               <p>তারিখঃ</p>
+              <br/>
               <p>বরাবর,</p>
               <p>সহকারী উপজেলা শিক্ষা অফিসার</p>
               <p>মাদারীপুর সদর, মাদারীপুর।</p>
@@ -38,14 +41,14 @@ export default function Home() {
               </p>
               <br />
               <p>জনাব,</p>
-              <p>
-                সবিনয় নিবেদন এই যে, আমি <b> {peopleName} </b>, প্রধান শিক্ষক,{" "}
+              <p className="text-justify leading-10">
+                সবিনয় নিবেদন এই যে, আমি <b> {peopleName} </b>, প্রধান শিক্ষক,
                 {schoolName} সরকারি প্রাথমিক বিদ্যালয়, মাদারীপুর সদর, মাদারীপুর
-                এ কর্মরত আছি। আমার ব্যক্তিগত / পারিবারিক সমস্যার কারনে{" "}
+                এ কর্মরত আছি। আমার ব্যক্তিগত / পারিবারিক সমস্যার কারনে
                 {amountDay} ( {dayInWord} ) দিনের বিশেষ ছুটি একান্ত প্রয়োজন।
               </p>
               <br />
-              <p>
+              <p className="text-justify">
                 অতএব, আমি যাতে {amountDay} ( {dayInWord} ) দিনের ছুটি পেতে পারি
                 তার সু-ব্যবস্থা করতে আপনার সদয় মর্জি হয়।
               </p>
@@ -67,10 +70,13 @@ export default function Home() {
             </button>
           </div>
         ) : (
-          <div className="bg-white p-16">
-            <h1 className="md:text-2xl sm:text-lg my-10 md:flex justify-center items-center font-bold">
-              মল্লিকা কম্পিউটারের সৌজন্যে
+          <div className="bg-white radius rounded shadow-xl p-16 mt-10">
+            <h1 className="md:text-2xl sm:text-lg md:flex justify-center items-center font-bold">
+              অর্ঘ্য মন্ডল ও
             </h1>
+            <h2 className="md:text-xl sm:text-lg mb-10 md:flex justify-center items-center font-bold">
+              মল্লিকা কম্পিউটারের সৌজন্যে
+            </h2>
             <div className="md:grid grid-cols-2 gap-10 ">
               <div className="flex flex-col">
                 <label className="font-bold text-lg" htmlFor="peoplename">
@@ -137,6 +143,7 @@ export default function Home() {
             >
               Preview Invoice
             </button>
+            <p className="flex justify-center"> বিশেষ প্রয়োজনেঃ উপজেলা গেট সংলগ্ন, মাদারীপুর সদর, মাদারীপুর। অর্ঘ্য বাবু বাবা ০১৩০০-২৪১০০১ </p>
           </div>
         )}
       </div>
