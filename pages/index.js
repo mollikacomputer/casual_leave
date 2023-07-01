@@ -89,7 +89,7 @@ export default function Home() {
                   type="text"
                   name="peoplename"
                   id="peoplename"
-                  placeholder="Your name"
+                  placeholder="আপনার নাম লিখুন"
                   autoComplete="off"
                   value={peopleName}
                   onChange={(e) => setPeopleName(e.target.value)}
@@ -103,7 +103,7 @@ export default function Home() {
                   type="text"
                   name="schoolName"
                   id="schoolName"
-                  placeholder="Enter School Name"
+                  placeholder="... সরকারি প্রাথমিক বিদ্যালয়"
                   autoComplete="off"
                   value={schoolName}
                   onChange={(e) => setSchoolName(e.target.value)}
@@ -146,6 +146,7 @@ export default function Home() {
             >
               Preview Information
             </button>
+            <p className="text-center my-5"> আপনার নৈমিত্তিক ছুটি একান্ত প্রয়োজন। লেখার লোক পাচ্ছেন না? কোন সমস্যা নাই এই ফরমটা ফিলাম করুন এবং নিচের বাটনে  ক্লিক করুন সঠিক হলে প্রিন্ট / ডাউনলোড করুন। সমস্যা থাকলে আবার নিচে যান এবং এডিট করুন। </p>
             <p className="flex justify-center"> বিশেষ প্রয়োজনেঃ উপজেলা গেট সংলগ্ন, মাদারীপুর সদর, মাদারীপুর। অর্ঘ্য বাবু বাবা ০১৩০০-২৪১০০১ </p>
           </div>
         )}
