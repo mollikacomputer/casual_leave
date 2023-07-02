@@ -77,7 +77,7 @@ export default function Home() {
             <h2 className="md:text-xl my-5 sm: hidden md:block md:flex justify-center items-center font-bold">
               অর্ঘ্য মন্ডল ও
             </h2>
-            <h3 className="md:text-lg mb-10 md:flex justify-center items-center font-bold">
+            <h3 className="md:text-lg md:mb-10 sm: mb-2 md:flex text-center font-bold">
               মল্লিকা কম্পিউটারের সৌজন্যে
             </h3>
             <div className="md:grid grid-cols-2 md:gap-10 sm: p-2 ">
@@ -142,7 +142,7 @@ export default function Home() {
             </div>
             <button
               onClick={() => setShowApplication(true)}
-              className="bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
+              className="sm: mb-5 sm: ml-2 bg-blue-500 text-white font-bold py-2 px-8 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300"
             >
               Preview Information
             </button>
