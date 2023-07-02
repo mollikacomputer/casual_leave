@@ -3,33 +3,33 @@ import { useState, useRef } from "react";
 
 
 export default function Home() {
+  
   const [showApplication, setShowApplication] = useState(false);
-
   const [peopleName, setPeopleName] = useState("");
   const [schoolName, setSchoolName] = useState("");
   const [amountDay, setAmountDay] = useState("");
   const [dayInWord, setDayInWord] = useState("");
+
   
   const componentRef = useRef();
   
-  const handlePrint = () => {
-    window.print();
-  };
+
   return (
     <>
       <div className="md:m-5 ">
         {showApplication ? (
-          <div className="bg-white md:p-10 sm: p-4">
+          <div className="bg-white md:p-20 sm: p-2 md:m-20 sm:m-2">
             <ReactToPrint
               trigger={() => (
-                <button className="bg-blue-500 md:mb-10 sm:mb-4 text-white font-bold py-2 md:px-8 sm:px2 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300">
+                <button onClick={()=>downloadHandle()} className= {'bg-blue-500 md:mb-10 sm:mb-4 text-white font-bold py-2 md:px-8 sm:px2 rounded shadow border-2 border-blue-500 hover:bg-transparent hover:text-blue-500 transition-all duration-300'}>
                   Download / Print
                 </button>
               )}
               content={() => componentRef.current}
             />
-            <h2 className="md:text-4xl sm:lg sm: hidden font-bold"> নৈমিত্তিক ছুটি </h2>
-            <div ref={componentRef} className="ml-20 mt-20 mr-10">
+            <h2 className="md:text-4xl sm: hidden font-bold"> নৈমিত্তিক ছুটি </h2>
+            <div ref={componentRef} className=''>
+            {/* <div ref={componentRef} className={`md: ml-20 md: mt-20 md: mr-10 ${downloadClassCheck}`}> */}
               <p>তারিখঃ</p>
               <br/>
               <p>বরাবর,</p>

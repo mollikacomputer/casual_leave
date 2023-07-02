@@ -33,3 +33,14 @@ input{
   font-weight: 600;
   letter-spacing: 1px;
 }
+.pdfMargin{
+  margin-top: 200px;
+  margin-left: 200px;
+  margin-right: 80px;
+}
+
+@media print {
+  body {
+    margin:150px 80px 200px 150px;
+  }
+}
