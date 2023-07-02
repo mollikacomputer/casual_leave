@@ -17,7 +17,7 @@ export default function Home() {
   };
   return (
     <>
-      <div className="md:ml-16 md:mr-10 ">
+      <div className="md:m-5 ">
         {showApplication ? (
           <div className="bg-white md:p-10 sm: p-4">
             <ReactToPrint
@@ -29,7 +29,7 @@ export default function Home() {
               content={() => componentRef.current}
             />
             <h2 className="md:text-4xl sm:lg sm: hidden font-bold"> নৈমিত্তিক ছুটি </h2>
-            <div ref={componentRef} className="md:m-16 sm: p-2 sm: m-2">
+            <div ref={componentRef} className="md: m-32 sm: p-2 sm: m-2">
               <p>তারিখঃ</p>
               <br/>
               <p>বরাবর,</p>
