@@ -29,7 +29,7 @@ export default function Home() {
               content={() => componentRef.current}
             />
             <h2 className="md:text-4xl sm:lg sm: hidden font-bold"> নৈমিত্তিক ছুটি </h2>
-            <div ref={componentRef} className="md: m-32 sm: p-2 sm: m-2">
+            <div ref={componentRef} className="ml-20 mt-20 mr-10">
               <p>তারিখঃ</p>
               <br/>
               <p>বরাবর,</p>
